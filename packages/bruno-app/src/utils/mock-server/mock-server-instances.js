@@ -458,7 +458,7 @@ export const getMockServerPortError = (portCheck, port) => {
   }
 
   if (portCheck.reason === 'bruno' || portCheck.reason === 'bruno-config') {
-    return `Port ${normalizedPort} is already used by another mock server in Bruno.`;
+    return `Port ${normalizedPort} is already used by another mock server in Brainal.`;
   }
 
   return 'Port must be between 1 and 65535.';

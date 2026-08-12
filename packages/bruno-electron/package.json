@@ -1,11 +1,11 @@
 {
   "version": "2.0.0",
-  "name": "bruno",
+  "name": "brainal",
   "description": "Opensource API Client for Exploring and Testing APIs",
-  "homepage": "https://www.usebruno.com",
+  "homepage": "https://github.com/ignasga/Brainal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/usebruno/bruno.git"
+    "url": "https://github.com/ignasga/Brainal.git"
   },
   "private": true,
   "main": "src/index.js",

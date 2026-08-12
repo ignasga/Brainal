@@ -1,8 +1,8 @@
 require('dotenv').config({ path: process.env.DOTENV_PATH });
 
 const config = {
-  appId: 'com.usebruno.app',
-  productName: 'Bruno',
+  appId: 'com.ignasga.brainal',
+  productName: 'Brainal',
   electronVersion: '37.6.1',
   directories: {
     buildResources: 'resources',
@@ -35,16 +35,16 @@ const config = {
     ],
     icon: 'resources/icons/mac/icon.icns',
     hardenedRuntime: true,
-    identity: 'Anoop MD (W7LPPWA48L)',
+    identity: null,
     entitlements: 'resources/entitlements.mac.plist',
     entitlementsInherit: 'resources/entitlements.mac.plist',
     notarize: false,
     requirements: 'resources/app-requirements.txt',
     protocols: [
       {
-        name: 'Bruno',
+        name: 'Brainal',
         schemes: [
-          'bruno'
+          'brainal'
         ]
       }
     ]
@@ -68,13 +68,13 @@ const config = {
     ],
     protocols: [
       {
-        name: 'Bruno',
-        schemes: ['bruno']
+        name: 'Brainal',
+        schemes: ['brainal']
       }
     ],
     category: 'Development',
     desktop: {
-      MimeType: 'x-scheme-handler/bruno;'
+      MimeType: 'x-scheme-handler/brainal;'
     }
   },
   deb: {
@@ -102,7 +102,7 @@ const config = {
       }
     ],
     sign: null,
-    publisherName: 'Bruno Software Inc'
+    publisherName: 'Brainal'
   },
   nsis: {
     include: 'resources/installer.nsh',

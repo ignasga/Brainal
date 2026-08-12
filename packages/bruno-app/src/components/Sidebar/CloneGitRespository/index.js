@@ -99,7 +99,7 @@ const CloneGitRepository = ({ onClose, onFinish, collectionRepositoryUrl = null 
       ...prev,
       {
         step: 'scan',
-        title: 'Scanning for Bruno files',
+        title: 'Scanning for Brainal files',
         completed: false
       }
     ]);
@@ -363,7 +363,7 @@ const CloneGitRepository = ({ onClose, onFinish, collectionRepositoryUrl = null 
                   {collectionPaths.length === 0 && (
                     <div className="scan-warning flex items-start gap-2">
                       <IconAlertCircle className="scan-warning-icon" size={18} strokeWidth={1.5} />
-                      <div>No Bruno collections were found in this repository.</div>
+                      <div>No Brainal collections were found in this repository.</div>
                     </div>
                   )}
                   {collectionPaths.length > 0 && (

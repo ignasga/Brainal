@@ -138,7 +138,7 @@ const assertIsolatedPortAvailable = async (requestedPort, mockServerUid) => {
 
   if (!result.available) {
     if (result.reason === 'bruno' || result.reason === 'bruno-config') {
-      throw new Error(`Port ${port} is already used by another mock server in Bruno.`);
+      throw new Error(`Port ${port} is already used by another mock server in Brainal.`);
     }
 
     if (result.reason === 'system') {

@@ -54,7 +54,7 @@ const RemoveCollection = ({ onClose, collectionUid }) => {
         handleConfirm={onConfirm}
         handleCancel={onClose}
       >
-        <p className="mb-4">Are you sure you want to close following collection in Bruno?</p>
+        <p className="mb-4">Are you sure you want to close following collection in Brainal?</p>
         <div className="collection-info-card">
           <div className="collection-name">{collection.name}</div>
           <div className="collection-path">{collection.pathname}</div>

@@ -8,7 +8,7 @@ const easterEggResponse = (request) => {
     '   /,    /`',
     '   \\\\"--\\\\',
     '',
-    'Bruno fetched your request. Good human.'
+    'Brainal fetched your request. Good human.'
   ].join('\n');
   const buffer = Buffer.from(body, 'utf-8');
   return {

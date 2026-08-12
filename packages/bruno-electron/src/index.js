@@ -76,7 +76,7 @@ const apiSpecWatcher = new ApiSpecWatcher();
 // Reference: https://content-security-policy.com/
 const contentSecurityPolicy = [
   'default-src \'self\'',
-  'connect-src \'self\' https://*.posthog.com',
+  'connect-src \'self\'',
   'font-src \'self\' https: data:;',
   'frame-src data:',
   'script-src \'self\' data:',
@@ -149,13 +149,13 @@ if (useSingleInstance && !gotTheLock) {
   // This is the primary instance (or single instance is disabled)
 
   // Try to remove any existing registrations
-  app.removeAsDefaultProtocolClient('bruno');
-  // Register as default handler for `bruno://` protocol URLs
-  app.setAsDefaultProtocolClient('bruno');
+  app.removeAsDefaultProtocolClient('brainal');
+  // Register as default handler for `brainal://` protocol URLs
+  app.setAsDefaultProtocolClient('brainal');
 
   if (isLinux) {
     try {
-      execSync('xdg-mime default bruno.desktop x-scheme-handler/bruno');
+      execSync('xdg-mime default brainal.desktop x-scheme-handler/brainal');
     } catch (err) {}
   }
 
@@ -243,7 +243,7 @@ app.on('ready', async () => {
       preload: path.join(__dirname, 'preload.js'),
       webviewTag: true
     },
-    title: 'Bruno',
+    title: 'Brainal',
     icon: path.join(__dirname, 'about/256x256.png'),
     titleBarStyle: isMac ? 'hiddenInset' : isWindows ? 'hidden' : undefined,
     frame: isLinux ? false : true,
