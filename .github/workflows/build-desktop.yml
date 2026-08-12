@@ -55,7 +55,6 @@ jobs:
           path: |
             packages/bruno-electron/out/*.exe
             packages/bruno-electron/out/*.dmg
-            packages/bruno-electron/out/*.pkg
             packages/bruno-electron/out/*.zip
           retention-days: 30
 
@@ -66,5 +65,4 @@ jobs:
           files: |
             packages/bruno-electron/out/*.exe
             packages/bruno-electron/out/*.dmg
-            packages/bruno-electron/out/*.pkg
             packages/bruno-electron/out/*.zip
