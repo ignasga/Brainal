@@ -21,6 +21,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     permissions:
       contents: write
+    env:
+      # The electron binary fetched by npm's postinstall is only used to run
+      # the app in dev; electron-builder downloads its own copy for packaging.
+      # Skipping it removes an unnecessary, flaky 123 MB download per job.
+      ELECTRON_SKIP_BINARY_DOWNLOAD: 1
     steps:
       - uses: actions/checkout@v6
 
