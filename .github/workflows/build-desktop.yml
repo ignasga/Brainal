@@ -33,7 +33,7 @@ jobs:
         run: npm run build:web
 
       - name: Package Desktop App
-        run: npm run build:electron
+        run: npm run build:electron || npm run build:electron
 
       - name: Upload Installers
         uses: actions/upload-artifact@v6
