@@ -15,7 +15,9 @@ const config = {
     }
   ],
   files: ['**/*'],
-  afterSign: 'notarize.js',
+  // Publishing is handled by the GitHub Actions release workflow, and unsigned
+  // builds cannot be notarized - keep electron-builder out of both.
+  publish: null,
   mac: {
     artifactName: '${name}_${version}_${arch}_${os}.${ext}',
     category: 'public.app-category.developer-tools',

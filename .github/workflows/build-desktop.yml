@@ -33,7 +33,15 @@ jobs:
         run: npm run build:web
 
       - name: Package Desktop App
-        run: npm run build:electron || npm run build:electron
+        id: package
+        continue-on-error: true
+        run: npm run build:electron
+
+      - name: Package Desktop App (retry after pause)
+        if: steps.package.outcome == 'failure'
+        run: |
+          sleep 120
+          npm run build:electron
 
       - name: Upload Installers
         uses: actions/upload-artifact@v6
